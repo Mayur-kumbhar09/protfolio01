@@ -76,3 +76,9 @@ card3.addEventListener("mouseenter", () => {
 card3.addEventListener("mouseleave", () => {
   cardGroup.classList.remove("card3-active");
 });
+
+// reset the form fields when the user clicks the submit button
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+  this.reset();
+});
