@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Updated Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -15,42 +14,65 @@
 <body>
     <div id="main-banner">
         <div class="container-fluid text-start">
-            <nav>
-                <img src="./img/logo.svg" alt="" class="img-fluid" />
-                <ul>
-                    <li><button type="button " class="btn btn-secondary"><a href="#"
-                                style="text-decoration: none;color: inherit;"> HOME</a></button></li>
-                    <li><button type="button " class="btn btn-secondary"><a href="#Education"
-                                style="text-decoration: none;color: inherit;"> ABOUT</a></button></li>
-                    <li><button type="button " class="btn btn-secondary"><a href="#projects"
-                                style="text-decoration: none;color: inherit;"> PROJECT</a></button></li>
-                    <li><button type="button " class="btn btn-secondary"><a href="#contact"
-                                style="text-decoration: none;color: inherit;"> CONTACT</a></button></li>
-                </ul>
-            </nav>
-            <div class="text">
-                <p>Welcome To My </p>
-                <p>
-                    <span class="word wisteria">Portfolio.</span>
-                    <span class="word wisteria">Blog.</span>
-                </p>
-            </div>
-            <div class="ocean">
 
-                <div class="wave"></div>
-                <div class="wave"></div>
+            <nav class="navbar navbar-expand-lg ">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="./img/logo.svg" alt="Logo" class="img-fluid" style="height: 40px;">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-secondary text-white mx-1" href="#">HOME</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-secondary text-white mx-1" href="#Education">ABOUT</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-secondary text-white mx-1" href="#projects">PROJECT</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-secondary text-white mx-1" href="#contact">CONTACT</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="text-container">
+                <div class="text">
+                    <p>Welcome To</p>
+                    <p>
+                        <span class="word wisteria"> My Portfolio.</span>
+                        <span class="word wisteria"> My Blog.</span>
+                    </p>
+                    <br>
+                    <span class="subtext">From front-end finesse to back-end brains — I do it all.</span>
+                </div>
+
+                <div class="ocean">
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                </div>
             </div>
         </div>
     </div>
-
     <div class="container-fluid text-center my-5" id="projects">
-        <h2>Projects</h2>
+        <div class="title_sec">
+            <h2>Projects</h2>
+            <hr />
+        </div>
+
         <section class="card-section">
             <div class="card-group" id="cardGroup">
                 <div class="card card1">
                     <div class="overlay">
                         <h2>Dashboard Manager</h2>
-                        <span>Dashboard Manager is a web-based application developed using React for the frontend and
+                        <span class="card_head">Dashboard Manager is a web-based application developed using React for
+                            the frontend and
                             Node.js for the backend. It provides an interactive and user-friendly interface for
                             managing, visualizing, and analyzing data through customizable dashboards. Key features
                             include real-time data updates, user authentication, dynamic widgets, and responsive design
@@ -64,7 +86,8 @@
                 <div class="card card2">
                     <div class="overlay">
                         <h2>Customer Product Manager</h2>
-                        <span>Customer Product Manager is a full-stack web application developed using React and Node.js
+                        <span class="card_head">Customer Product Manager is a full-stack web application developed using
+                            React and Node.js
                             that enables efficient management of customer information and product inventories. The
                             platform allows users to add, update, and track customer data, link customers to products,
                             and monitor sales or service interactions. With a clean UI, real-time data handling, and
@@ -80,7 +103,7 @@
                 <div class="card card3">
                     <div class="overlay">
                         <h2>Virtual Mouse</h2>
-                        <span>
+                        <span class="card_head">
                             Virtual Mouse is a computer vision-based desktop application developed in Python,
                             utilizing libraries such as OpenCV, MediaPipe, Tkinter, and Pandas. It allows users to
                             control the mouse cursor using hand gestures captured via a webcam. The system detects hand
@@ -95,11 +118,14 @@
                 </div>
             </div>
         </section>
+
     </div>
     <div class="container-fluid p-5" id="Education">
         <div class="container text-center my-5">
-            <h2>My Journey</h2>
-
+            <div class="title_sec">
+                <h2>My Journey</h2>
+                <hr />
+            </div>
             <div class="journey-container">
 
                 <!-- Education Column -->
@@ -160,13 +186,14 @@
             </div>
         </div>
     </div>
-   
     <div class="container py-5">
-        <h2>🛠️ My Skills</h2>
+        <div class="title_sec">
+            <h2>🛠️ My Skills</h2>
+            <hr />
+        </div>
 
         <div class="skills-container">
 
-            <!-- Skill Card Example -->
             <div class="skill-card">
                 <div class="skill-name">HTML</div>
                 <div class="stars">
@@ -217,11 +244,14 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid py-5" id="contact">
+    <div class="container-fluid py-3" id="contact">
         <div class="container p-4">
-            <h2>📧 Contact</h2>
+            <div class="title_sec">
+                <h2>📧 Contact</h2>
+                <hr>
+            </div>
             <div class="row">
-                <div class="col">
+                <div class="col-lg-6 col-md-6 col-xs-12">
                     <div class="form-section">
                         <h2>Have Some Questions?</h2>
                         <form id="contactForm" action="#" method="post">
@@ -248,7 +278,7 @@
                         </form>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col-lg-6 col-md-6 col-xs-12">
                     <div class="contact-img">
                         <img src="./img/contact1.png" alt=""> <br>
                         <div class="contact-details">
@@ -287,7 +317,7 @@
             </div>
         </div>
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./index.js"></script>
 </body>
 

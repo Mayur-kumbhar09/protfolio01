@@ -1,0 +1,319 @@
+/* New style for index2.html */
+
+:root {
+    --color-primary: #819A91;
+    --color-secondary: #A7C1A8;
+    --color-bg-gradient-start: #D1D8BE;
+    --color-bg-gradient-end: #EEEFE0;
+    --color-text-light: #EEEFE0;
+    --color-text-dark: #819A91;
+    --color-accent: #A7C1A8;
+    --color-accent-light: #D1D8BE;
+    --color-bg-dark: rgba(129, 154, 145, 0.3);
+    --color-bg-dark-opacity: rgba(129, 154, 145, 0.75);
+    --color-btn-primary-bg: #819A91;
+    --color-btn-primary-bg-hover: #A7C1A8;
+    --color-btn-success-bg: #D1D8BE;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, var(--color-bg-gradient-start), var(--color-bg-gradient-end));
+    color: var(--color-text-dark);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    padding: 0px 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 6px var(--color-bg-dark-opacity);
+}
+
+nav a {
+    color: var(--color-text-light);
+    text-decoration: none;
+    margin: 0px;
+    font-size: 1.2rem;
+    padding: 8px 15px;
+    border: 2px solid transparent;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--color-text-light);
+    color: var(--color-text-dark) !important;
+    border-color: var(--color-secondary);
+}
+
+section {
+    max-width: 100%;
+    margin: auto 40px;
+    /* background-color: var(--color-bg-dark); */
+    padding: 30px !important;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px var(--color-bg-dark-opacity);
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 2.4rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+footer {
+    margin-top: 50px;
+    padding: 20px 0;
+    background-color: var(--color-bg-dark);
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    color: var(--color-text-light);
+}
+
+/* Responsive */
+@media screen and (min-width: 768px) {
+    .navbar-toggler {
+        display: block;
+        margin: 10px 0;
+    }
+
+    section {
+        margin: 20px 10px;
+        padding: 20px;
+
+    }
+}
+
+@media (max-width: 768px) {
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    section {
+        margin: 20px 10px;
+        padding: 20px;
+    }
+}
+
+/* Additional styles for carousel captions */
+.carousel-caption {
+    bottom: 20px;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+}
+
+.carousel-caption h5 {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.carousel-caption p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Education section styles */
+#education {
+    /* muted light green */
+    color: #819A91;
+    /* muted dark green */
+    padding: 40px 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(129, 154, 145, 0.3);
+}
+
+.journey-container {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.column {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    position: relative;
+    padding-left: 2rem;
+    border-left: 3px dashed #0077b6;
+}
+
+.entry {
+    margin-bottom: 2rem;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.entry::before {
+    content: '';
+    position: absolute;
+    left: -16px;
+    top: 8px;
+    width: 14px;
+    height: 14px;
+    /* Medium Blue */
+    border: 2px solid white;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.entry-summary {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 1.2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.entry-summary:hover {
+    background: #b3d9ff;
+    /* Light Blue */
+    transform: scale(1.02);
+}
+
+.entry-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #003366;
+    /* Dark Blue */
+}
+
+.entry-subtitle {
+    font-size: 0.95rem;
+    color: #555;
+    margin-top: 4px;
+}
+
+.entry-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+    padding-left: 1rem;
+    color: #333;
+}
+
+.entry:hover .entry-details {
+    max-height: 300px;
+    margin-top: 0.5rem;
+}
+
+.entry-details p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .card-group {
+        display: flex;
+        flex-direction: column !important;
+    }
+
+    .journey-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .column {
+        border-left: none;
+        border-top: 3px dashed #0077b6;
+        padding-left: 0;
+        padding-top: 2rem;
+    }
+
+    .entry::before {
+        left: 8px;
+        top: -16px;
+    }
+
+    p {
+
+        font-weight: 700;
+        font-size: 2.4em;
+    }
+
+    .text {
+        background-color: #070707;
+        font-size: 0.65rem;
+        position: absolute;
+        width: -webkit-fill-available;
+        left: 0;
+        height: auto;
+        top: 30%;
+        margin-top: 0px;
+    }
+}
+
+/* New background style for contact section */
+.contact-bg {
+
+    border-radius: 15px;
+    box-shadow: 0 8px 16px var(--color-bg-dark-opacity);
+    padding: 30px !important;
+    margin-top: 20px;
+    color: #070707;
+}
+
+.form-section {
+    background-color: #ffffff;
+    padding: 10px 14px;
+    border: 2px solid #ffffff;
+    border-radius: 20px;
+    width: 85%;
+}
+
+hr {
+    border: 1px solid #070707;
+    border-radius: 25px;
+    background-color: #000000;
+    height: 10px;
+    width: 220px;
+    margin: auto auto 32px auto;
+}
+
+#projects {
+    background-color: #212529;
+}
+
+.head_container {
+    background-image: url('./img/contact-image.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    background-color: #00000050;
+    width: 100%;
+    height: 100% !important;
+    z-index: 1;
+
+}
+
+h1 {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    z-index: 2;
+    color: var(--color-text-light);
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+.contact-details{
+    display: grid;
+    place-items: center;
+}
